@@ -3,7 +3,12 @@ import http from "http";
 import { WebSocketServer } from "ws";
 
 const app = express();
+const PORT = process.env.PORT || 5000; // Use Render's dynamic port
+
+// Create HTTP Server
 const server = http.createServer(app);
+
+// Initialize WebSocket Server
 const wss = new WebSocketServer({ server });
 
 wss.on("connection", (ws) => {
@@ -11,6 +16,8 @@ wss.on("connection", (ws) => {
 
   ws.on("message", (message) => {
     console.log("Received:", message);
+
+    // Broadcast message to all clients except sender
     wss.clients.forEach((client) => {
       if (client !== ws && client.readyState === ws.OPEN) {
         client.send(message);
@@ -23,4 +30,5 @@ wss.on("connection", (ws) => {
 
 app.get("/", (req, res) => res.send("WebSocket Server Running"));
 
-server.listen(5000, () => console.log("Server running on port 5000"));
+// Start Server
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
