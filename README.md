@@ -3,14 +3,14 @@ With high-performance online streaming platform that supports live and on-demand
 
 Features
 
-✅ Live and On-Demand Streaming
-✅ User Authentication (JWT-based)
-✅ Subscription-Based Payment System (Stripe/PayPal)
-✅ Real-time Chat and Notifications (Socket.io)
-✅ Responsive UI/UX for Multi-Device Support
-✅ Cloud-Based Media Storage (AWS S3/CDN)
-✅ Secure API with Rate Limiting and Encryption
-✅ Optimized Performance for High Traffic
+Live and On-Demand Streaming
+User Authentication (JWT-based)
+Subscription-Based Payment System (Stripe/PayPal)
+Real-time Chat and Notifications (Socket.io)
+Responsive UI/UX for Multi-Device Support
+Cloud-Based Media Storage (AWS S3/CDN)
+Secure API with Rate Limiting and Encryption
+Optimized Performance for High Traffic
 
 Installation
 Prerequisites
